@@ -1,10 +1,10 @@
 class Image
+  
   def initialize(image)
     @image = image
   end
 
   def output_image
-    puts @image.class
      @image.each do |x|
        puts x.join("")
      end

@@ -17,7 +17,7 @@ image = Image.new([
   [0, 0, 0, 0],
   [1, 0, 0, 0]
 ])
-
+puts "imageblur 1"
 image.output_image
 
 

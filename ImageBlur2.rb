@@ -18,7 +18,6 @@ class Image
   
   def blur(ones)
       ones.each do |x,y|
-        
       @image[x-1][y]= 1 if x >-1  #up
       @image[x+1][y]= 1 unless x >= 1 #down
       @image[x][y-1]= 1 unless y == 0 #left
@@ -28,6 +27,7 @@ class Image
 
   def output_image
     blur(get_ones)
+
     @image.each do |x|
       puts x.join
     end
@@ -37,10 +37,9 @@ end
 image = Image.new([
 [0, 0, 0, 0],
 [0, 1, 0, 0],
-[0, 0, 0, 0],
-[1, 0, 0, 0]
+[0, 0, 0, 1],
+[0, 0, 0, 0]
 ])
-
+puts "imageblur 2"
 #original output
 image.output_image
-
